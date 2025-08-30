@@ -11,6 +11,15 @@ jobs:
         runs-on: ubuntu-latest
         steps:
         - id: s00
-        # running some command
+          # running hello command
           run: echo "Hello, World! Current time in Github is $(date)."    
+        - id: s01
+         # print the content of hello.txt file
+          run: cat hello.txt
+        - id: s02
+        # print the list of files in the repository
+          run: ls -l
+         
+
+        
         
