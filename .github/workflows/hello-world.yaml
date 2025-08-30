@@ -14,12 +14,11 @@ jobs:
           # running hello command
           run: echo "Hello, World! Current time in Github is $(date)."    
         - id: s01
-         # print the content of hello.txt file
-          run: cat hello.txt
+          # print the list of files in the repository
+          run: ls -al
         - id: s02
-        # print the list of files in the repository
-          run: ls -l
-         
+          # print the content of hello.txt file
+          run: cat hello.txt
 
         
         
