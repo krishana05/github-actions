@@ -20,7 +20,7 @@ jobs:
           # use a cowsay action to print a message
           uses: mscoutermarsh/cowsays-action@master
           with:
-                text: 'wow wow wow! ${{steps.s01.outputs.CURR_DATE}}'
+                text: 'wow wow wow! ${{steps.s01.outputs.CURR_DATE}} ${{github.repository}} ${{github.ref}}'
                 color: 'blue'
         # - id: s01
         #   # print the list of files in the repository
