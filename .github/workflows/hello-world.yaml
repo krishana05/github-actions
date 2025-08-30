@@ -1,0 +1,16 @@
+#name
+name: hello_world
+
+#trigger
+on:
+- push
+
+#jobs
+jobs:
+    greeting:
+        runs-on: ubuntu-latest
+        steps:
+        - id: s00
+        # running some command
+          run: echo "Hello, World! Current time in Github is $(date)."    
+        
