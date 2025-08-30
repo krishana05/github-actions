@@ -14,11 +14,17 @@ jobs:
           # running hello command
           run: echo "Hello, World! Current time in Github is $(date)."    
         - id: s01
-          # print the list of files in the repository
-          run: ls -al
-        - id: s02
-          # print the content of hello.txt file
-          run: cat hello.txt
+          # use a cowsay action to print a message
+          uses: mscoutermarsh/cowsays-action@master
+          with:
+                text: 'wow wow wow!'
+                color: 'blue'
+        # - id: s01
+        #   # print the list of files in the repository
+        #   run: ls -al
+        # - id: s02
+        #   # print the content of hello.txt file
+        #   run: cat hello.txt
 
         
         
