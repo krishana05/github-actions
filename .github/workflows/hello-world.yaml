@@ -12,12 +12,15 @@ jobs:
         steps:
         - id: s00
           # running hello command
-          run: echo "Hello, World! Current time in Github is $(date)."    
+          run: echo "Hello, World! Current time in Github is $(date), ${GITHUB_OUTPUT}"   
         - id: s01
+        # create a value and pass to next step
+          run: echo "CURR_DATE=$(date)" >> $GITHUB_OUTPUT  
+        - id: s02
           # use a cowsay action to print a message
           uses: mscoutermarsh/cowsays-action@master
           with:
-                text: 'wow wow wow!'
+                text: 'wow wow wow! ${{steps.s01.outputs.CURR_DATE}}'
                 color: 'blue'
         # - id: s01
         #   # print the list of files in the repository
